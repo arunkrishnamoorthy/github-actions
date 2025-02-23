@@ -1,0 +1,17 @@
+name: CI 
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: 
+      - main 
+  
+jobs:
+  ci:
+    runs-on: ubunubuntu-22.04
+    steps: 
+    - name: Checkout repository
+      uses: actions/checkout@v4
